@@ -33,8 +33,7 @@ infix
 function chains with symbols and context variables
 ```
         val campaign = CampaignBuilder()
-            .emailWithin("t1", 10, 12, "10-23-23")
-            .call("t2", 10, "10-25-23")
-            .mail("t3", shipping = Overnight, "10-27-23")
+            .emailWithin("c1", hourStart = 10, hourEnd = 16, date = "10-20-23")
+            .callAfter("c2", hours = 24)
             .build()
 ```            
